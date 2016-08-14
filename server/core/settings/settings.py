@@ -10,7 +10,7 @@ from core.env_utils import parse_emails, bool_value
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-CLIENT_BASE_DIR = os.path.join(BASE_DIR, '../client')
+CLIENT_BASE_DIR = os.path.join(BASE_DIR, '../../client')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool_value(os.environ.get('DJANGO_DEBUG'))
