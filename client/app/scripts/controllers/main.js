@@ -8,10 +8,7 @@
  * Controller of the clientApp
  */
 angular.module('clientApp')
-  .controller('MainCtrl', ['Restangular', function (Restangular) {
-        Restangular.one('api/').get().then(function(){
-            window.alert('done');
-        });
+  .controller('MainCtrl', [function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
