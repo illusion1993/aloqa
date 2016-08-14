@@ -6,20 +6,15 @@ import sys
 import os
 import re
 
-import dj_database_url
-
 from core.env_utils import parse_emails, bool_value
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 CLIENT_BASE_DIR = os.path.join(BASE_DIR, '../client')
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('DJANGO_SECRET')
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool_value(os.environ.get('DJANGO_DEBUG'))
-print 'debug value is {}'.format(DEBUG)
+DEV = bool_value(os.environ.get('DJANGO_DEV'))
 
 # Honor the 'Host' header
 ALLOWED_HOSTS = ['*']
@@ -57,13 +52,6 @@ ROOT_URLCONF = 'core.urls'
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-
-# Parse database configuration from $DATABASE_URL
-DATABASES = {
-    'default': dj_database_url.config()
-}
-
-
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/
 LANGUAGE_CODE = 'en-us'
@@ -84,24 +72,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 # Static file and template locations
-DEBUG = False
-if DEBUG:
-    DJANGO_TEMPLATE_DIRS = (
-        os.path.join(CLIENT_BASE_DIR, 'app'),
-    )
+DJANGO_TEMPLATE_DIRS = (
+    os.path.join(CLIENT_BASE_DIR, 'dist'),
+)
 
-    STATICFILES_DIRS = (
-        os.path.join(CLIENT_BASE_DIR, 'app', 'static'),
-        os.path.join(CLIENT_BASE_DIR, '.tmp', 'static')  # Generated CSS files
-    )
-else:
-    DJANGO_TEMPLATE_DIRS = (
-        os.path.join(CLIENT_BASE_DIR, 'dist'),
-    )
-
-    STATICFILES_DIRS = (
-        os.path.join(CLIENT_BASE_DIR, 'dist', 'static'),
-    )
+STATICFILES_DIRS = (
+    os.path.join(CLIENT_BASE_DIR, 'dist', 'static'),
+)
 
 TEMPLATES = [
     {
@@ -119,18 +96,6 @@ TEMPLATES = [
     },
 ]
 
-# Mail
-FORM_MAIL = os.environ.get('DJANGO_FROM_MAIL')
-
-if 'SENDGRID_USERNAME' in os.environ:
-    EMAIL_HOST_USER = os.environ.get('SENDGRID_USERNAME')
-    EMAIL_HOST = 'smtp.sendgrid.net'
-    EMAIL_PORT = 587
-    EMAIL_USE_TLS = True
-    EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_PASSWORD')
-else:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
 # Custom user
 AUTH_USER_MODEL = 'accounts.BaseUser'
 
@@ -147,11 +112,6 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAdminUser'
     ]
 }
-
-
-# Logging and error reporting
-ADMINS = parse_emails(os.environ.get('DJANGO_ADMINS'))
-MANAGERS = parse_emails(os.environ.get('DJANGO_MANAGERS'))
 
 IGNORABLE_404_URLS = (
     re.compile(r'^/apple-touch-icon.*\.png$'),
@@ -187,3 +147,8 @@ LOGGING = {
         },
     }
 }
+
+if DEV:
+    from core.settings.settings_dev import *
+else:
+    from core.settings.settings_prod import *
