@@ -2,16 +2,16 @@
 
 /**
  * @ngdoc function
- * @name clientApp.controller:MainCtrl
+ * @name clientApp.controller:AboutCtrl
  * @description
- * # MainCtrl
+ * # AboutCtrl
  * Controller of the clientApp
  */
 angular.module('clientApp')
-  .controller('MainCtrl', [function () {
+  .controller('LoginCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-  }]);
+  });

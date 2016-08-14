@@ -17,21 +17,22 @@ angular
         'ngRoute',
         'ngSanitize',
         'ngTouch',
-        'restangular'
+        'restangular',
+        'ui.bootstrap',
+        'ui.router',
     ])
-    .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider
-            .when('/', {
-                templateUrl: 'views/main.html',
-                controller: 'MainCtrl',
-                controllerAs: 'main'
+    .config(['$locationProvider', '$urlRouterProvider', '$stateProvider', function ($locationProvider, $urlRouterProvider, $stateProvider) {
+        $locationProvider.html5Mode(true);
+        $urlRouterProvider.otherwise('/');
+        $stateProvider
+            .state('home', {
+                templateUrl: 'views/home.html',
+                controller: 'HomeCtrl',
+                url: '/'
             })
-            .when('/about', {
-                templateUrl: 'views/about.html',
-                controller: 'AboutCtrl',
-                controllerAs: 'about'
+            .state('login', {
+                templateUrl: 'views/login.html',
+                controller: 'LoginCtrl',
+                url: '/login'
             })
-            .otherwise({
-                redirectTo: '/'
-            });
     }]);

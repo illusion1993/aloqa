@@ -19,6 +19,8 @@ module.exports = function (grunt) {
         cdnify: 'grunt-google-cdn'
     });
 
+    grunt.loadNpmTasks('grunt-bower-install');
+
     // Configurable paths for the application
     var appConfig = {
         app: require('./bower.json').appPath || 'app',
@@ -456,6 +458,22 @@ module.exports = function (grunt) {
                 configFile: 'test/karma.conf.js',
                 singleRun: true
             }
+        },
+
+        bowerInstall: {
+ 
+          target: {
+         
+            // Point to the files that should be updated when 
+            // you run `grunt bower-install` 
+            src: [
+              'app/*.html',   // .html support...
+              'app/views/**/*.html',   // .html support... 
+              'app/views/**/*.jade',   // .jade support... 
+              'app/styles/main.scss',  // .scss & .sass support... 
+              'app/config.yml'         // and .yml & .yaml support out of the box! 
+            ],
+          }
         }
     });
 
