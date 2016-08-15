@@ -52,21 +52,26 @@ footer{
     padding-bottom: 15vh;
     //background: #333;
 }
-.login-form-container{
-    padding-bottom: 20px;
+.register-container{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    //background: #333;
+}
+.login-form-container, .register-form-container{
+    //padding-bottom: 20px;
     background: #ffffff;
 }
-.login-form-container .form-header{
+.form-header{
     background: #333;
     color: #f8f8f8;
     padding: 15px;
 }
-.login-form-container .form-header h2{
+.form-header h2{
     display: inline-block;
     margin: 0;
     padding: 0;
 }
-.login-form-container .form-body{
+.form-body{
     padding: 15px;
 }
 .btn-success{
