@@ -58,6 +58,11 @@ angular
                 templateUrl: 'views/register.html',
                 controller: 'RegisterCtrl',
                 url: '/register'
+            })
+            .state('dashboard', {
+                templateUrl: 'views/dashboard.html',
+                controller: 'DashboardCtrl',
+                url: '/dashboard'
             });
     }])
 
