@@ -84,3 +84,6 @@ client/bower_components
 
 # Local settings
 server/core/settings/settings_dev.py
+
+# Django Migrations
+server/*/migrations/*.*
