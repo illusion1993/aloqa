@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name clientApp.controller:LoginCtrl
+ * @name clientApp.controller:RegisterCtrl
  * @description
- * # LoginCtrl
+ * # RegisterCtrl
  * Controller of the clientApp
  */
 angular.module('clientApp')
-  .controller('LoginCtrl', ['$timeout', '$rootScope', function ($timeout, $rootScope) {
+  .controller('RegisterCtrl', ['$timeout', '$rootScope', function ($timeout, $rootScope) {
     $timeout(function(){
 		$rootScope.$broadcast("pageLoaded");
 	}, 500);

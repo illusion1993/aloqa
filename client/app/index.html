@@ -17,18 +17,20 @@
     <!-- endbuild -->
 </head>
 <body ng-app="clientApp">
+<div class="pre-loader" data-ng-controller="LoaderCtrl" data-ng-hide="isHidden"></div>
     <!--[if lte IE 8]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your
         experience.</p>
     <![endif]-->
-    <div ui-view>
+    <div class="view-content" ui-view>
     </div>
     
-    <hr>
-    
-    <footer>
-        <p>&copy; Company 2015</p>
-    </footer>
+    <div class="container">
+        <hr>
+        <footer>
+            <p>&copy; Company 2015</p>
+        </footer>
+    </div>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -65,8 +67,10 @@
 
     <!-- build:js({.tmp,app}) static/scripts/scripts.js -->
     <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/loader.js"></script>
     <script src="scripts/controllers/home.js"></script>
     <script src="scripts/controllers/login.js"></script>
+    <script src="scripts/controllers/register.js"></script>
     <!-- endbuild -->
 </body>
 </html>
