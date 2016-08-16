@@ -1,10 +1,19 @@
-# -*- coding: utf-8 -*-
-from django.conf.urls import patterns, include, url
-from rest_framework import routers
+from django.conf.urls import url, include
+from django.views.decorators.csrf import csrf_exempt
 
-router = routers.DefaultRouter()
+from rest_framework.routers import DefaultRouter
+from rest_framework.authtoken.views import obtain_auth_token
 
-urlpatterns = patterns('api.views',
-    url(r'^', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-)
+# from .views import UserViewSet
+
+router = DefaultRouter()
+# router.register(r'users', UserViewSet)
+
+urlpatterns = router.urls
+
+urlpatterns += [
+    url(r'^login/$', csrf_exempt(obtain_auth_token)),
+    url(r'^auth/', include('rest_auth.urls')),
+    url(r'^auth/register/', include('rest_auth.registration.urls')),
+    url(r'^account/', include('allauth.urls')),
+]

@@ -45,6 +45,9 @@
         ga('create', 'UA-XXXXX-X');
         ga('send', 'pageview');
     </script>
+    <script type="text/javascript">
+        var csrfToken = '{{ csrf_token }}';
+    </script>
 
     <!-- build:js(.) static/scripts/vendor.js -->
     <!-- bower:js -->
@@ -72,6 +75,8 @@
     <script src="scripts/controllers/login.js"></script>
     <script src="scripts/controllers/register.js"></script>
     <script src="scripts/controllers/dashboard.js"></script>
+
+    <script src="scripts/services/auth.js"></script>
     <!-- endbuild -->
 </body>
 </html>
