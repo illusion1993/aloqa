@@ -25,7 +25,7 @@ angular
     .config(['$locationProvider', '$urlRouterProvider', '$stateProvider', 'RestangularProvider', function ($locationProvider, $urlRouterProvider, $stateProvider, RestangularProvider) {
         
         // Using html5Mode to remove hash(#) from URLs
-        $locationProvider.html5Mode(true);
+        //$locationProvider.html5Mode(true);
 
         // API base url for restangular
         RestangularProvider.setBaseUrl('api/');

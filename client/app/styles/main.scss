@@ -7,75 +7,125 @@
   color: #000;
   padding: 0.2em 0;
 }
-.pre-loader{
-  display: block; 
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: 100%; 
-  background: #ccc; 
+
+.pre-loader {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ccc;
   z-index: 999;
 }
-body{
-    padding-bottom: 20px;
-    background: #f4f4f4;
+
+body {
+  padding-bottom: 20px;
+  background: #f4f4f4;
+//  background: #2c3e50;
 }
-hr{
-    border-top: 1px solid #e0e0e0;
+
+hr {
+  border-top: 1px solid #e0e0e0;
+//  border-top: 1px solid #34495e;
 }
-.view-content{
-    min-height: 85vh;
+
+footer{
+//  color: #ecf0f1;
 }
-.navbar{
-    min-height: 30px;
-    border-radius: 0%;
+
+.view-content {
+  min-height: 85vh;
 }
-.navbar-inverse{
+
+.navbar {
+//  min-height: 30px;
+  border-radius: 0%;
+}
+
+.navbar-inverse {
   background: #336699 none;
+  background: #2c3e50 none;
   border: none;
 }
-.navbar-header .navbar-brand{
-    color: #fff;
-    padding: 5px 5px;
-    height: 30px;
-    font-size: 16px;
-}
-.app-content{
 
+.navbar-header .navbar-brand {
+  color: #fff;
 }
-footer{
-    text-align: center;
+
+footer {
+  text-align: center;
 }
-.login-container{
-    padding-top: 20vh;
-    padding-bottom: 15vh;
-    //background: #333;
+
+.login-container {
+  padding-top: 20vh;
+  padding-bottom: 15vh;
+  //background: #333;
 }
-.register-container{
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    //background: #333;
+
+.register-container {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  //background: #333;
 }
-.login-form-container, .register-form-container{
-    //padding-bottom: 20px;
-    background: #ffffff;
+
+.login-form-container, .register-form-container {
+  //padding-bottom: 20px;
+  background: #ffffff;
 }
-.form-header{
-    background: #333;
-    color: #f8f8f8;
-    padding: 15px;
+
+.form-header {
+  background: #333;
+  color: #f8f8f8;
+  padding: 15px;
 }
-.form-header h2{
-    display: inline-block;
-    margin: 0;
-    padding: 0;
+
+.form-header h2 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
-.form-body{
-    padding: 15px;
+
+.form-body {
+  padding: 15px;
 }
-.btn-success{
-    border-radius: 0;
-    font-size: 16px;
-    padding: 10px 24px;
+
+.btn-success {
+  border-radius: 0;
+  font-size: 16px;
+  padding: 10px 24px;
+}
+.app-body{
+  margin-top: 70px;
+}
+.app-body .row{
+  margin: 0;
+}
+.tool-column {
+  padding-left: 0;
+}
+.tool-panel {
+  padding: 15px 0;
+}
+
+.contacts-panel {
+  background: #bdc3c7;
+  height: 400px;
+  margin-top: 50px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.details-panel {
+  background: #bdc3c7;
+  height: 400px;
+  margin-top: 50px;
+  border-left: 1px solid #ccc;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+@media (min-width: 768px){
+  .workspace-panel {
+    margin-left: 15px;
+  }
 }

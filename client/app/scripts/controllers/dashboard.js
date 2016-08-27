@@ -8,8 +8,8 @@
  * Controller of the clientApp
  */
 angular.module('clientApp')
-  .controller('DashboardCtrl', ['$timeout', '$rootScope', function ($timeout, $rootScope) {
-    $timeout(function(){
-		$rootScope.$broadcast("pageLoaded");
-	}, 500);
-  }]);
+    .controller('DashboardCtrl', ['$timeout', '$rootScope', function ($timeout, $rootScope) {
+        $timeout(function () {
+            $rootScope.$broadcast("pageLoaded");
+        }, 100);
+    }]);
