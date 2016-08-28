@@ -1,5 +1,5 @@
-$fa-font-path: "/bower_components/font-awesome/fonts/";
 // bower:scss
+$fa-font-path: "/bower_components/font-awesome/fonts/";
 @import "font-awesome/scss/font-awesome.scss";
 // endbower
 
@@ -103,7 +103,7 @@ footer {
   padding: 10px 24px;
 }
 .app-body{
-  margin-top: 70px;
+  margin-top: 50px;
 }
 .app-body .row{
   margin: 0;
@@ -112,22 +112,47 @@ footer {
   padding: 0;
 }
 .tool-panel {
-  padding: 15px 0;
+  padding: 55px 0;
 }
 .contacts-panel {
-  background: #ccc;
+  background: #fff;
   height: 200px;
   margin-top: 15px;
   margin-left: -15px;
   margin-right: -15px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
-ul.contacts-panel-tools {
+.contacts-panel-toolkit {
+//  border-bottom: 1px solid #ccc;
+}
+ul.contacts-panel-tools-right, ul.contacts-panel-tools-left {
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: inline-block;
 }
-ul.contacts-panel-tools li {
+ul.contacts-panel-tools-right {
   float: right;
+}
+ul.contacts-panel-tools-left {
+  float: left;
+}
+ul.contacts-panel-tools-left li, ul.contacts-panel-tools-right li {
+  display: block;
+  float: left;
+  margin: 0 5px;
+}
+ul.contacts-panel-tools-right li a.btn, ul.contacts-panel-tools-left li a.btn {
+  float: right;
+  padding: 6px 5px;
+  border: none;
+  font-size: 12px;
+}
+.contacts-box {
+
 }
 .details-panel {
   background: #ddd;
