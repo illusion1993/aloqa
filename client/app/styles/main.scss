@@ -26,11 +26,79 @@ $fa-font-path: "/bower_components/font-awesome/fonts/";
 }
 
 body {
-  padding-bottom: 20px;
-//  background: #f4f4f4;
-//  background: #2c3e50;
   background: #f8f8f8;
+  height: 100vh;
+  overflow: hidden;
 }
+
+///* Base for label styling */
+//[type="checkbox"]:not(:checked),
+//[type="checkbox"]:checked {
+//  position: absolute;
+//  left: -9999px;
+//}
+//[type="checkbox"]:not(:checked) + label,
+//[type="checkbox"]:checked + label {
+//  position: relative;
+//  padding-left: 25px;
+//  cursor: pointer;
+//}
+//
+///* checkbox aspect */
+//[type="checkbox"]:not(:checked) + label:before,
+//[type="checkbox"]:checked + label:before {
+//  content: '';
+//  position: absolute;
+//  left:0; top: 2px;
+//  width: 17px; height: 17px;
+//  border: 1px solid #aaa;
+//  background: #f8f8f8;
+//  border-radius: 3px;
+//  box-shadow: inset 0 1px 3px rgba(0,0,0,.3)
+//}
+///* checked mark aspect */
+//[type="checkbox"]:not(:checked) + label:after,
+//[type="checkbox"]:checked + label:after {
+//  content: '✔';
+//  position: absolute;
+//  top: 3px; left: 4px;
+//  font-size: 18px;
+//  line-height: 0.8;
+//  color: #09ad7e;
+//  transition: all .2s;
+//}
+///* checked mark aspect changes */
+//[type="checkbox"]:not(:checked) + label:after {
+//  opacity: 0;
+//  transform: scale(0);
+//}
+//[type="checkbox"]:checked + label:after {
+//  opacity: 1;
+//  transform: scale(1);
+//}
+///* disabled checkbox */
+//[type="checkbox"]:disabled:not(:checked) + label:before,
+//[type="checkbox"]:disabled:checked + label:before {
+//  box-shadow: none;
+//  border-color: #bbb;
+//  background-color: #ddd;
+//}
+//[type="checkbox"]:disabled:checked + label:after {
+//  color: #999;
+//}
+//[type="checkbox"]:disabled + label {
+//  color: #aaa;
+//}
+///* accessibility */
+//[type="checkbox"]:checked:focus + label:before,
+//[type="checkbox"]:not(:checked):focus + label:before {
+//  border: 1px dotted blue;
+//}
+//
+///* hover style just for information */
+//label:hover:before {
+//  border: 1px solid #4778d9!important;
+//}
 
 hr {
   border-top: 1px solid #e0e0e0;
@@ -116,7 +184,6 @@ footer {
 }
 .contacts-panel {
   background: #fff;
-  height: 200px;
   margin-top: 15px;
   margin-left: -15px;
   margin-right: -15px;
@@ -140,19 +207,72 @@ ul.contacts-panel-tools-right {
 ul.contacts-panel-tools-left {
   float: left;
 }
-ul.contacts-panel-tools-left li, ul.contacts-panel-tools-right li {
-  display: block;
+ul.contacts-panel-tools-left li {
   float: left;
-  margin: 0 5px;
 }
-ul.contacts-panel-tools-right li a.btn, ul.contacts-panel-tools-left li a.btn {
+ul.contacts-panel-tools-right li {
   float: right;
-  padding: 6px 5px;
+}
+.contacts-tool-outer {
+  display: inline-block;
+  margin: 0 5px;
+  outline: none;
+  border: 1px solid #d0d3d6;
+  border-radius: 3px;
+  color: black;
+}
+.contacts-tool-outer.hover-tool {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+79,e5e5ea+100 */
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffffff 79%, #e5e5ea 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #ffffff 79%,#e5e5ea 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #ffffff 79%,#e5e5ea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5ea',GradientType=0 ); /* IE6-9 */
+}
+.contacts-tool-outer.hover-tool:hover {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+79,cfcfd3+100 */
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffffff 79%, #cfcfd3 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #ffffff 79%,#cfcfd3 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #ffffff 79%,#cfcfd3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cfcfd3',GradientType=0 ); /* IE6-9 */
+}
+.contacts-tool {
+  padding: 6px 10px;
   border: none;
   font-size: 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #9d9d9d;
 }
-.contacts-box {
-
+.hover-tool .contacts-tool:hover {
+  color: #333;
+}
+.contacts-tool .caret {
+  height: 9px;
+  margin-left: 0px;
+//  color: #aaa;
+}
+.contacts-tool.checkbox-tool {
+  padding: 3px 10px;
+}
+.pointer {
+  cursor: pointer;
+}
+.contacts-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.contact-box {
+  height: 100px;
+  border-left: 3px solid #c0c0c0;
+}
+.contact-box .contacts-tool-outer {
+  float: right;
+  margin-top: 15px;
 }
 .details-panel {
   background: #ddd;

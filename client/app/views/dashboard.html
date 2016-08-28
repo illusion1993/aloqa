@@ -13,16 +13,16 @@
         <div class="collapse navbar-collapse" uib-collapse="navCollapsed">
             <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
                 <li>
-                    <a href="#">Contacts <span class="badge badge-info">23</span></a>
+                    <a href="#">Contacts <span class="label label-warning">23</span></a>
                 </li>
                 <li>
-                    <a href="#">Tags <span class="badge badge-info">7</span></a>
+                    <a href="#">Tags <span class="label label-warning">7</span></a>
                 </li>
                 <li>
-                    <a href="#">Circles <span class="badge badge-info">2</span></a>
+                    <a href="#">Circles <span class="label label-warning">2</span></a>
                 </li>
                 <li>
-                    <a href="#">Locations <span class="badge badge-info">12</span></a>
+                    <a href="#">Locations <span class="label label-warning">12</span></a>
                 </li>
             </ul>
         </div>
@@ -34,10 +34,10 @@
         <div class="col-md-2 col-sm-3 hidden-xs tool-column">
             <div class="tool-panel">
                 <div class="btn-group-vertical tool-nav-left">
-                    <button class="btn active">Contacts <span class="badge badge-info">23</span></button>
-                    <button class="btn">Tags <span class="badge badge-info">7</span></button>
-                    <button class="btn">Circles <span class="badge badge-info">12</span></button>
-                    <button class="btn">Locations <span class="badge badge-info">4</span></button>
+                    <button class="btn active">Contacts <span class="label label-warning">23</span></button>
+                    <button class="btn">Tags <span class="label label-warning">7</span></button>
+                    <button class="btn">Circles <span class="label label-warning">12</span></button>
+                    <button class="btn">Locations <span class="label label-warning">4</span></button>
                 </div>
             </div>
         </div>
@@ -45,28 +45,106 @@
             <div class="contacts-panel">
                 <div class="contacts-panel-toolkit">
                     <ul class="contacts-panel-tools-left">
-                        <li>
-                            <a href="#" class="btn btn-success"><i class="fa fa-plus-circle"></i> Add Contact</a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn btn-success"><i class="fa fa-plus-circle"></i> Add Contact</a>
+                        <li class="contacts-tool-outer hover-tool">
+                            <div class="contacts-tool pointer">
+                                <span><i class="fa fa-plus-circle"></i> Add New Contact</span>
+                            </div>
                         </li>
                         <span class="clearfix"></span>
                     </ul>
                     <ul class="contacts-panel-tools-right">
-                        <li>
-                            <a href="#" class="btn btn-success"><i class="fa fa-plus-circle"></i> Add Contact</a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn btn-success"><i class="fa fa-plus-circle"></i> Add Contact</a>
+                        <li class="contacts-tool-outer hover-tool">
+                            <div class="contacts-tool checkbox-tool pointer">
+                                <input type="checkbox" name="select_all" class="pointer"/>
+                                <span class="caret"></span>
+                            </div>
                         </li>
                         <span class="clearfix"></span>
                     </ul>
                     <span class="clearfix"></span>
                 </div>
-                <div class="contacts-box">
-
-                </div>
+                <ul class="contacts-list" data-ng-style="style()" resize>
+                    <li>
+                        <div class="contact-box">
+                            <div class="contacts-tool-outer hover-tool">
+                                <div class="contacts-tool checkbox-tool pointer">
+                                    <input type="checkbox" name="select_all" class="pointer"/>
+                                    <span class="caret"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact-box">
+                            <div class="contacts-tool-outer hover-tool">
+                                <div class="contacts-tool checkbox-tool pointer">
+                                    <input type="checkbox" name="select_all" class="pointer"/>
+                                    <span class="caret"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact-box">
+                            <div class="contacts-tool-outer hover-tool">
+                                <div class="contacts-tool checkbox-tool pointer">
+                                    <input type="checkbox" name="select_all" class="pointer"/>
+                                    <span class="caret"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact-box">
+                            <div class="contacts-tool-outer hover-tool">
+                                <div class="contacts-tool checkbox-tool pointer">
+                                    <input type="checkbox" name="select_all" class="pointer"/>
+                                    <span class="caret"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact-box">
+                            <div class="contacts-tool-outer hover-tool">
+                                <div class="contacts-tool checkbox-tool pointer">
+                                    <input type="checkbox" name="select_all" class="pointer"/>
+                                    <span class="caret"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact-box">
+                            <div class="contacts-tool-outer hover-tool">
+                                <div class="contacts-tool checkbox-tool pointer">
+                                    <input type="checkbox" name="select_all" class="pointer"/>
+                                    <span class="caret"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact-box">
+                            <div class="contacts-tool-outer hover-tool">
+                                <div class="contacts-tool checkbox-tool pointer">
+                                    <input type="checkbox" name="select_all" class="pointer"/>
+                                    <span class="caret"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact-box">
+                            <div class="contacts-tool-outer hover-tool">
+                                <div class="contacts-tool checkbox-tool pointer">
+                                    <input type="checkbox" name="select_all" class="pointer"/>
+                                    <span class="caret"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="col-md-4 hidden-sm hidden-xs">
