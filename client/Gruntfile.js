@@ -432,6 +432,11 @@ module.exports = function (grunt) {
                     cwd: 'bower_components/font-awesome',
                     src: 'fonts/*',
                     dest: '<%= yeoman.dist %>/static'
+                }, {
+                    expand: true,
+                    cwd: 'bower_components/malihu-custom-scrollbar-plugin',
+                    src: '*.png',
+                    dest: '<%= yeoman.dist %>/static/styles'
                 }]
             },
             styles: {
