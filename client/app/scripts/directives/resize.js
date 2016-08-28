@@ -8,7 +8,7 @@
  * Directive of the clientApp
  */
 angular.module('clientApp')
-    .directive('resize', function ($window) {
+    .directive('resize', ['$window', function ($window) {
         //return {
         //    link: function (scope, element, attrs) {
         //        var w = angular.element($window);
@@ -85,4 +85,4 @@ angular.module('clientApp')
                 scope.$apply();
             });
         }
-    });
+    }]);
