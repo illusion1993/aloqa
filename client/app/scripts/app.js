@@ -20,6 +20,7 @@ angular
         'restangular',
         'ui.bootstrap',
         'ui.router',
+        'ngScrollbars'
     ])
     
     .config(['$locationProvider', '$urlRouterProvider', '$stateProvider', 'RestangularProvider', function ($locationProvider, $urlRouterProvider, $stateProvider, RestangularProvider) {
