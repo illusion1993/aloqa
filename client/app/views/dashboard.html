@@ -10,25 +10,41 @@
             </button>
             <a class="navbar-brand" href="#">aloqa</a>
         </div>
+        <div class="collapse navbar-collapse" uib-collapse="navCollapsed">
+            <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
+                <li>
+                    <a href="#">Contacts <span class="badge badge-info">23</span></a>
+                </li>
+                <li>
+                    <a href="#">Tags <span class="badge badge-info">7</span></a>
+                </li>
+                <li>
+                    <a href="#">Circles <span class="badge badge-info">2</span></a>
+                </li>
+                <li>
+                    <a href="#">Locations <span class="badge badge-info">12</span></a>
+                </li>
+            </ul>
+        </div>
         <!--/.navbar-collapse -->
     <!--</div>-->
 </nav>
 <div class="app-body">
     <div class="row">
-        <div class="col-md-2 hidden-sm hidden-xs tool-column">
+        <div class="col-md-2 col-sm-3 hidden-xs tool-column">
             <div class="tool-panel">
-                <div class="btn-group-vertical">
-                    <button class="btn">Contacts</button>
-                    <button class="btn">Tags</button>
-                    <button class="btn">Circles</button>
-                    <button class="btn">Locations</button>
+                <div class="btn-group-vertical tool-nav-left">
+                    <button class="btn active">Contacts <span class="badge badge-info">23</span></button>
+                    <button class="btn">Tags <span class="badge badge-info">7</span></button>
+                    <button class="btn">Circles <span class="badge badge-info">12</span></button>
+                    <button class="btn">Locations <span class="badge badge-info">4</span></button>
                 </div>
             </div>
         </div>
-        <div class="col-md-6 col-sm-8 col-xs-12" style="background: #aaa;">
+        <div class="col-md-6 col-sm-9 col-xs-12" style="background: #aaa;">
             <div style="background: #336699; margin: 5px 0; height: 200px;"></div>
         </div>
-        <div class="col-md-4 col-sm-4 hidden-xs" style="background: #ccc;">
+        <div class="col-md-4 hidden-sm hidden-xs" style="background: #ccc;">
             <div style="background: #336699; margin: 5px 0; height: 200px;"></div>
         </div>
     </div>

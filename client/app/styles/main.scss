@@ -21,8 +21,9 @@
 
 body {
   padding-bottom: 20px;
-  background: #f4f4f4;
+//  background: #f4f4f4;
 //  background: #2c3e50;
+  background: #f8f8f8;
 }
 
 hr {
@@ -44,15 +45,15 @@ footer{
 }
 
 .navbar-inverse {
-  background: #336699 none;
-  background: #2c3e50 none;
+  background: #2F4B26 none;
   border: none;
 }
-
 .navbar-header .navbar-brand {
   color: #fff;
 }
-
+.navbar-collapse {
+  overflow: hidden !important;
+}
 footer {
   text-align: center;
 }
@@ -128,4 +129,38 @@ footer {
   .workspace-panel {
     margin-left: 15px;
   }
+}
+.tool-nav-left {
+  display: block;
+}
+.tool-nav-left .btn {
+  text-align: left;
+  background: none;
+  border: none;
+  border-left: 2px solid transparent;
+  font-weight: bold;
+  outline: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: none;
+  color: #22181C;
+}
+.tool-nav-left .btn:focus, .tool-nav-left .btn:active {
+  outline: none;
+}
+.tool-nav-left .btn:hover {
+  background: #f8f8f8;
+  border-left: 2px solid #85BDA6;
+  color: #85BDA6;
+}
+.tool-nav-left .btn.active {
+  background: #fff;
+  color: #3E885B;
+  border-left: 2px solid #3E885B;
+}
+.badge {
+  margin-left: 5px;
+}
+.badge-info {
+  background: #336699;
 }
